@@ -20,7 +20,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/", async (request, response) => {
+app.get("/index", async (request, response) => {
   const result = {
     status: "ok",
     message: "Server is running",
