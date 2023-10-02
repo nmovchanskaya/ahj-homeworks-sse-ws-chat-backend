@@ -20,6 +20,14 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/", async (request, response) => {
+  const result = {
+    status: "ok",
+    message: "Server is running",
+  };
+  response.status(200).send(JSON.stringify(result)).end();
+});
+
 const userState = [];
 app.post("/new-user", async (request, response) => {
   if (Object.keys(request.body).length === 0) {
