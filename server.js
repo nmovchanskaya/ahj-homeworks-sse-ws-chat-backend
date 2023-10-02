@@ -25,7 +25,6 @@ app.get("/index", async (request, response) => {
     status: "ok",
     message: "Server is running",
   };
-  const userState = [];
   response.status(200).send(JSON.stringify(result)).end();
 });
 
